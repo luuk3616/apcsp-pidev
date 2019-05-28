@@ -1,24 +1,30 @@
 #include <stdio.h>
 
-// arrayAdd function: Array arr[] has s size and is incremented by n
-int arrayAdd(int arr[], int s, int n)
-{
-  arr[s];
+void arrayAdd(int*, int, int);
 
-  // For loop prints values in index from 0-s
-  for (int i = 0; i < s; i++)
+int main() 
+{
+  int arr [100];
+  for (int i = 0; i < 100; ++i)
   {
-    n = i*i;
-    arr[i] = n;
-    printf("%d\n", arr[i]);
+    arr[i] = i * i;
+  }
+
+  for (int i = 0; i < 100; ++i)
+  {
+    printf ("%d > %d\n" , i, arr[i]);
+  }
+  arrayAdd(arr, 100, 5);
+  printf ("adding 5: \n");
+  for (int i = 0; i < 100; ++i)
+  {
+    printf ("%d > %d\n" , i, arr[i]);
   }
 }
-
-// Calling array function with an array size of 100
-int main()
+void arrayAdd(int* inputArray, int s, int n)
 {
-  int size = 100;
-  int increment;
-  int a[size];
-  int function = arrayAdd(a, size, increment);
+  for (int i = 0; i < s; ++i)
+  {
+    inputArray[i]+=n;
+  }
 }
