@@ -1,21 +1,19 @@
 #include <stdio.h>
-#include <math.h>
-
-// Circle area function definition
-float areaOfCircle(float r)
+float areaofcircle (float r, float a)
 {
-  float a;
-  a = M_PI*r*r;
+  a = r * r * 3.14;
   return a;
 }
 
-// Calling area function for radius 3.5-12.5
-int main()
+int main(void) 
 {
-  for (float radius = 3.5; radius < 12.5; radius++)
+  //call areaofcircle
+  float i;
+  for (i=3.5; i<=12.5; i++)
   {
-  float area;
-  area = areaOfCircle(radius);
-  printf("%f\n", area);
+    float r = i;
+    float a;
+    a = areaofcircle(r, a);
+    printf("The area of the circle is %f\n", a);
   }
 }
