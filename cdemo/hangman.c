@@ -2,7 +2,6 @@
 #include <string.h>
 
 int main() {
-  // Get word to guess
   char answer[128];
   printf("Enter word to guess: ");
   fflush(stdout);
@@ -17,7 +16,6 @@ int main() {
     mask[i] = 0;
   }
 
-  // Loop over each round of guessing
   int gameover = 0;
   while (! gameover) {
     // Print word with *s for unguessed letters
@@ -56,7 +54,7 @@ int main() {
   }
 
   // Print victory message!
-  printf("Victory! The word is \"%s\".\n", answer);
+  printf("Good job! The word is \"%s\".\n", answer);
 
   return 0;
 }
